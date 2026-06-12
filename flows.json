@@ -227,20 +227,6 @@
         "disabled": "false"
     },
     {
-        "id": "13c35eebed185809",
-        "type": "ui-group",
-        "name": "Ресурси ПК",
-        "page": "b349ac6c6c4ee8e9",
-        "width": 12,
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "29e9c9e26c787371",
         "type": "MySQLdatabase",
         "name": "",
@@ -249,56 +235,6 @@
         "db": "teplyca_sim",
         "tz": "",
         "charset": "UTF8"
-    },
-    {
-        "id": "7578b3fb3a5032e3",
-        "type": "ui-page",
-        "name": "Page Namesql",
-        "ui": "0f6d940b97c911fa",
-        "path": "/page3",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "b29cbffa3f564506",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 1,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "aa48c2122ed3c616",
-        "type": "ui-group",
-        "name": "Group Name",
-        "page": "7578b3fb3a5032e3",
-        "width": 6,
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
     },
     {
         "id": "34760b4771ef8251",
@@ -341,36 +277,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 190,
-        "y": 180,
+        "x": 250,
+        "y": 240,
         "wires": [
             [
-                "333cf852920a0782"
-            ]
-        ]
-    },
-    {
-        "id": "333cf852920a0782",
-        "type": "function",
-        "z": "2ecc35e7569d3903",
-        "name": "Емуляція датчика BH1750",
-        "func": "\nlet currentLux = context.get('lux') || 6000;\n\ncurrentLux += Math.floor(Math.random() * 500) - 300;\nif (currentLux < 3000) currentLux = 3000;\nif (currentLux > 12000) currentLux = 12000;\n\ncontext.set('lux', currentLux);\n\nmsg.topic = \"teplyca/lux\"; \nmsg.payload = currentLux;\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 460,
-        "y": 180,
-        "wires": [
-            [
-                "4b630cb1d389a8be",
-                "6de304078787c32c",
-                "ff72cecd57565dc4",
-                "1acb2b67c19d743e",
-                "d56c290e94047227",
-                "fc85a0c649d8c674"
+                "56917672519d040b"
             ]
         ]
     },
@@ -387,8 +298,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 400,
-        "y": 380,
+        "x": 800,
+        "y": 520,
         "wires": []
     },
     {
@@ -447,8 +358,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 650,
-        "y": 60,
+        "x": 790,
+        "y": 160,
         "wires": [
             []
         ]
@@ -494,15 +405,15 @@
             }
         ],
         "min": 0,
-        "max": "12000",
+        "max": "10000",
         "sizeThickness": 16,
         "sizeGap": 4,
         "sizeKeyThickness": 8,
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 670,
-        "y": 100,
+        "x": 810,
+        "y": 200,
         "wires": [
             []
         ]
@@ -511,12 +422,12 @@
         "id": "a67821e627239dd2",
         "type": "ui-text",
         "z": "2ecc35e7569d3903",
-        "group": "02a18db237bd7925",
+        "group": "fd294f3e297c4483",
         "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Статус системи",
+        "label": "Режим",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "style": false,
@@ -527,8 +438,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 660,
-        "y": 320,
+        "x": 730,
+        "y": 440,
         "wires": []
     },
     {
@@ -557,11 +468,12 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 130,
-        "y": 320,
+        "x": 190,
+        "y": 480,
         "wires": [
             [
-                "4b630cb1d389a8be"
+                "4b630cb1d389a8be",
+                "f1b4fa828ad5039a"
             ]
         ]
     },
@@ -591,11 +503,12 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 130,
-        "y": 360,
+        "x": 190,
+        "y": 520,
         "wires": [
             [
-                "4b630cb1d389a8be"
+                "4b630cb1d389a8be",
+                "f1b4fa828ad5039a"
             ]
         ]
     },
@@ -604,20 +517,21 @@
         "type": "function",
         "z": "2ecc35e7569d3903",
         "name": "Логіка керування",
-        "func": "\nif (msg.topic === \"mode\") { flow.set(\"mode\", msg.payload); return null; }\nif (msg.topic === \"lamp\") { flow.set(\"manual_lamp\", msg.payload); return null; }\n\nif (msg.topic === \"greenhouse/lux\") {\n    let lux = msg.payload;\n    let mode = flow.get(\"mode\") || false;\n    let manualLamp = flow.get(\"manual_lamp\") || false;\n    let lampStatus = mode ? manualLamp : (lux < 3000);\n    \n\n    let statusText = lampStatus ? \"увімкнено\" : \"вимкнено\";\n    \n    let gpioSignal = lampStatus ? 1 : 0;\n    \n\n    let sheetData = {\n        lux: lux,\n        status: statusText,\n        time: new Date().toLocaleString()\n    };\n\n    return [\n        { payload: statusText },\n        { payload: gpioSignal },\n        { payload: sheetData } \n    ];\n}",
+        "func": "\nif (msg.topic === \"mode\") { flow.set(\"mode\", msg.payload); return null; }\nif (msg.topic === \"lamp\") { flow.set(\"manual_lamp\", msg.payload); return null; }\n\nif (msg.topic === \"teplyca/lux\") {\n    let lux = msg.payload;\n    let mode = flow.get(\"mode\") || false;\n    let manualLamp = flow.get(\"manual_lamp\") || false;\n    let lampStatus = mode ? manualLamp : (lux < 500);\n    \n\n    let statusText = lampStatus ? \"увімкнено\" : \"вимкнено\";\n    \n    let gpioSignal = lampStatus ? 1 : 0;\n    \n\n    let sheetData = {\n        lux: lux,\n        status: statusText,\n        time: new Date().toLocaleString()\n    };\n\n    return [\n        { payload: statusText },\n        { payload: gpioSignal },\n        { payload: sheetData } \n    ];\n}",
         "outputs": 2,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 350,
-        "y": 320,
+        "x": 530,
+        "y": 480,
         "wires": [
             [
                 "a67821e627239dd2",
                 "0ed7a0e46c841d30",
-                "7ac5cfd2681b5a91"
+                "d56c290e94047227",
+                "240120d2dd20c7ca"
             ],
             [
                 "240120d2dd20c7ca"
@@ -628,7 +542,7 @@
         "id": "0ed7a0e46c841d30",
         "type": "ui-text",
         "z": "2ecc35e7569d3903",
-        "group": "02a18db237bd7925",
+        "group": "fd294f3e297c4483",
         "order": 3,
         "width": 0,
         "height": 0,
@@ -644,15 +558,14 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 660,
-        "y": 360,
+        "x": 760,
+        "y": 480,
         "wires": []
     },
     {
         "id": "acdf7ff494b8c88d",
         "type": "GSheet",
         "z": "2ecc35e7569d3903",
-        "d": true,
         "creds": "5d18903945e0bc9f",
         "method": "append",
         "action": "",
@@ -660,8 +573,8 @@
         "cells": "Аркуш1!A2",
         "flatten": false,
         "name": "",
-        "x": 1010,
-        "y": 200,
+        "x": 970,
+        "y": 280,
         "wires": [
             []
         ]
@@ -678,8 +591,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
-        "y": 200,
+        "x": 800,
+        "y": 280,
         "wires": [
             [
                 "acdf7ff494b8c88d"
@@ -690,13 +603,12 @@
         "id": "5921da555a52675d",
         "type": "telegram sender",
         "z": "2ecc35e7569d3903",
-        "d": true,
         "name": "",
         "bot": "0a49a6fa5fb52503",
         "haserroroutput": false,
         "outputs": 1,
-        "x": 1030,
-        "y": 160,
+        "x": 970,
+        "y": 320,
         "wires": [
             []
         ]
@@ -713,8 +625,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
-        "y": 160,
+        "x": 800,
+        "y": 320,
         "wires": [
             [
                 "5921da555a52675d"
@@ -725,10 +637,9 @@
         "id": "79c6da6e2a7b265e",
         "type": "mysql",
         "z": "2ecc35e7569d3903",
-        "d": true,
         "mydb": "29e9c9e26c787371",
         "name": "",
-        "x": 1010,
+        "x": 970,
         "y": 240,
         "wires": [
             []
@@ -746,7 +657,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
+        "x": 800,
         "y": 240,
         "wires": [
             [
@@ -755,20 +666,44 @@
         ]
     },
     {
-        "id": "7ac5cfd2681b5a91",
-        "type": "GSheet",
+        "id": "f1b4fa828ad5039a",
+        "type": "debug",
         "z": "2ecc35e7569d3903",
-        "creds": "5d18903945e0bc9f",
-        "method": "append",
-        "action": "",
-        "sheet": "1PjoBuCB3DrVh5uSKuw1Ieik7QiZCKeuZlmUPqV3jZkc",
-        "cells": "Аркуш1!A2",
-        "flatten": false,
-        "name": "",
-        "x": 770,
-        "y": 480,
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "56917672519d040b",
+        "type": "function",
+        "z": "2ecc35e7569d3903",
+        "name": "Емуляція датчика BH1750",
+        "func": "\nlet currentLux = context.get('lux') || 500;\n\n\ncurrentLux += Math.floor(Math.random() * 1500) - 450;\n\n\nif (currentLux < 50) currentLux = 50;\nif (currentLux > 5000) currentLux = 5000;\n\n\ncontext.set('lux', currentLux);\nmsg.topic = \"teplyca/lux\";\nmsg.payload = currentLux;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 240,
         "wires": [
-            []
+            [
+                "4b630cb1d389a8be",
+                "6de304078787c32c",
+                "ff72cecd57565dc4",
+                "fc85a0c649d8c674",
+                "1acb2b67c19d743e",
+                "d56c290e94047227"
+            ]
         ]
     }
 ]
