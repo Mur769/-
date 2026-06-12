@@ -1,0 +1,774 @@
+[
+    {
+        "id": "2ecc35e7569d3903",
+        "type": "tab",
+        "label": "simulated",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1b72ad94f8f9e988",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "34760b4771ef8251"
+                    }
+                ]
+            }
+        ],
+        "out": []
+    },
+    {
+        "id": "0f6d940b97c911fa",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "b29cbffa3f564506",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "cf62b0a857082b04",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "0f6d940b97c911fa",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "b29cbffa3f564506",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "02a18db237bd7925",
+        "type": "ui-group",
+        "name": "Моніторинг освітленості",
+        "page": "cf62b0a857082b04",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "0a49a6fa5fb52503",
+        "type": "telegram bot",
+        "botname": "8943510549:AAE0p4di4fbiYvN8fGQgHQ1orvMwKHxDhCA",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "f5fb8cd267e4a144",
+        "type": "ui-spacer",
+        "group": "02a18db237bd7925",
+        "name": "spacer",
+        "tooltip": "",
+        "order": 6,
+        "width": 1,
+        "height": 1,
+        "className": ""
+    },
+    {
+        "id": "fd294f3e297c4483",
+        "type": "ui-group",
+        "name": "керування ",
+        "page": "cf62b0a857082b04",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "5d18903945e0bc9f",
+        "type": "gauth",
+        "name": "sa1-494@flash-ascent-498019-j4.iam.gserviceaccount.com"
+    },
+    {
+        "id": "67c27d45977d1e65",
+        "type": "ui-theme",
+        "name": "Theme Name",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "b349ac6c6c4ee8e9",
+        "type": "ui-page",
+        "name": "Моніторинг",
+        "ui": "0f6d940b97c911fa",
+        "path": "/monitoring",
+        "icon": "monitor-dashboard",
+        "layout": "grid",
+        "theme": "67c27d45977d1e65",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "13c35eebed185809",
+        "type": "ui-group",
+        "name": "Ресурси ПК",
+        "page": "b349ac6c6c4ee8e9",
+        "width": 12,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "29e9c9e26c787371",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "teplyca_sim",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "7578b3fb3a5032e3",
+        "type": "ui-page",
+        "name": "Page Namesql",
+        "ui": "0f6d940b97c911fa",
+        "path": "/page3",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "b29cbffa3f564506",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "aa48c2122ed3c616",
+        "type": "ui-group",
+        "name": "Group Name",
+        "page": "7578b3fb3a5032e3",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "34760b4771ef8251",
+        "type": "ui-text",
+        "z": "1b72ad94f8f9e988",
+        "group": "02a18db237bd7925",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 190,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "2ae6d8a9f14cb803",
+        "type": "inject",
+        "z": "2ecc35e7569d3903",
+        "name": " перевірка кожну годину",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 180,
+        "wires": [
+            [
+                "333cf852920a0782"
+            ]
+        ]
+    },
+    {
+        "id": "333cf852920a0782",
+        "type": "function",
+        "z": "2ecc35e7569d3903",
+        "name": "Емуляція датчика BH1750",
+        "func": "\nlet currentLux = context.get('lux') || 6000;\n\ncurrentLux += Math.floor(Math.random() * 500) - 300;\nif (currentLux < 3000) currentLux = 3000;\nif (currentLux > 12000) currentLux = 12000;\n\ncontext.set('lux', currentLux);\n\nmsg.topic = \"teplyca/lux\"; \nmsg.payload = currentLux;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 180,
+        "wires": [
+            [
+                "4b630cb1d389a8be",
+                "6de304078787c32c",
+                "ff72cecd57565dc4",
+                "1acb2b67c19d743e",
+                "d56c290e94047227",
+                "fc85a0c649d8c674"
+            ]
+        ]
+    },
+    {
+        "id": "240120d2dd20c7ca",
+        "type": "debug",
+        "z": "2ecc35e7569d3903",
+        "name": "Сигнал на GPIO світлодіод",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 400,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "6de304078787c32c",
+        "type": "ui-chart",
+        "z": "2ecc35e7569d3903",
+        "group": "02a18db237bd7925",
+        "name": "",
+        "label": "chart",
+        "order": 5,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "property",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#37ff00",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 650,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ff72cecd57565dc4",
+        "type": "ui-gauge",
+        "z": "2ecc35e7569d3903",
+        "name": "освітленість",
+        "group": "02a18db237bd7925",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "lux",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4800",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "8400",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "12000",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 670,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a67821e627239dd2",
+        "type": "ui-text",
+        "z": "2ecc35e7569d3903",
+        "group": "02a18db237bd7925",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Статус системи",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 660,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "b962a3c55c93b60a",
+        "type": "ui-switch",
+        "z": "2ecc35e7569d3903",
+        "name": "",
+        "label": "режим ",
+        "group": "fd294f3e297c4483",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "mode",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "label",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 130,
+        "y": 320,
+        "wires": [
+            [
+                "4b630cb1d389a8be"
+            ]
+        ]
+    },
+    {
+        "id": "02cf10841666458f",
+        "type": "ui-switch",
+        "z": "2ecc35e7569d3903",
+        "name": "",
+        "label": "лампа",
+        "group": "fd294f3e297c4483",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": false,
+        "topic": "lamp",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "label",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "4b630cb1d389a8be"
+            ]
+        ]
+    },
+    {
+        "id": "4b630cb1d389a8be",
+        "type": "function",
+        "z": "2ecc35e7569d3903",
+        "name": "Логіка керування",
+        "func": "\nif (msg.topic === \"mode\") { flow.set(\"mode\", msg.payload); return null; }\nif (msg.topic === \"lamp\") { flow.set(\"manual_lamp\", msg.payload); return null; }\n\nif (msg.topic === \"greenhouse/lux\") {\n    let lux = msg.payload;\n    let mode = flow.get(\"mode\") || false;\n    let manualLamp = flow.get(\"manual_lamp\") || false;\n    let lampStatus = mode ? manualLamp : (lux < 3000);\n    \n\n    let statusText = lampStatus ? \"увімкнено\" : \"вимкнено\";\n    \n    let gpioSignal = lampStatus ? 1 : 0;\n    \n\n    let sheetData = {\n        lux: lux,\n        status: statusText,\n        time: new Date().toLocaleString()\n    };\n\n    return [\n        { payload: statusText },\n        { payload: gpioSignal },\n        { payload: sheetData } \n    ];\n}",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 320,
+        "wires": [
+            [
+                "a67821e627239dd2",
+                "0ed7a0e46c841d30",
+                "7ac5cfd2681b5a91"
+            ],
+            [
+                "240120d2dd20c7ca"
+            ]
+        ]
+    },
+    {
+        "id": "0ed7a0e46c841d30",
+        "type": "ui-text",
+        "z": "2ecc35e7569d3903",
+        "group": "02a18db237bd7925",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Статус лампи",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 660,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "acdf7ff494b8c88d",
+        "type": "GSheet",
+        "z": "2ecc35e7569d3903",
+        "d": true,
+        "creds": "5d18903945e0bc9f",
+        "method": "append",
+        "action": "",
+        "sheet": "1PjoBuCB3DrVh5uSKuw1Ieik7QiZCKeuZlmUPqV3jZkc",
+        "cells": "Аркуш1!A2",
+        "flatten": false,
+        "name": "",
+        "x": 1010,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1acb2b67c19d743e",
+        "type": "function",
+        "z": "2ecc35e7569d3903",
+        "name": "function 3",
+        "func": "let luxValue = msg.payload;\nlet currentTime = new Date().toLocaleString(\"uk-UA\", { timeZone: \"Europe/Kyiv\" });\n\nmsg.payload = [luxValue + \" лк\", currentTime];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 200,
+        "wires": [
+            [
+                "acdf7ff494b8c88d"
+            ]
+        ]
+    },
+    {
+        "id": "5921da555a52675d",
+        "type": "telegram sender",
+        "z": "2ecc35e7569d3903",
+        "d": true,
+        "name": "",
+        "bot": "0a49a6fa5fb52503",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1030,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d56c290e94047227",
+        "type": "function",
+        "z": "2ecc35e7569d3903",
+        "name": "function 4",
+        "func": "\nlet lux = msg.payload;\nlet time = new Date().toLocaleString(\"uk-UA\", { timeZone: \"Europe/Kyiv\" });\n\nmsg.payload = {\n    chatId: \"898653827\",\n    type: \"message\",\n    content: \" \\nЯскравість: \" + lux + \" лк\\nДата й Час: \" + time\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 160,
+        "wires": [
+            [
+                "5921da555a52675d"
+            ]
+        ]
+    },
+    {
+        "id": "79c6da6e2a7b265e",
+        "type": "mysql",
+        "z": "2ecc35e7569d3903",
+        "d": true,
+        "mydb": "29e9c9e26c787371",
+        "name": "",
+        "x": 1010,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fc85a0c649d8c674",
+        "type": "function",
+        "z": "2ecc35e7569d3903",
+        "name": "function 2",
+        "func": "\nlet lux = parseInt(msg.payload);\n\nlet mysqlTimestamp = new Date().toLocaleString(\"sv-SE\", { timeZone: \"Europe/Kyiv\" });\n\nmsg.topic = \"INSERT INTO lux_data (timestamp, lux_value) VALUES ('\" + mysqlTimestamp + \"', \" + lux + \");\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 240,
+        "wires": [
+            [
+                "79c6da6e2a7b265e"
+            ]
+        ]
+    },
+    {
+        "id": "7ac5cfd2681b5a91",
+        "type": "GSheet",
+        "z": "2ecc35e7569d3903",
+        "creds": "5d18903945e0bc9f",
+        "method": "append",
+        "action": "",
+        "sheet": "1PjoBuCB3DrVh5uSKuw1Ieik7QiZCKeuZlmUPqV3jZkc",
+        "cells": "Аркуш1!A2",
+        "flatten": false,
+        "name": "",
+        "x": 770,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    }
+]
